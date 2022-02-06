@@ -1,0 +1,53 @@
+//Nanda Nurahmanita Putri
+//G1A021046
+//Informatika B
+
+#include <stdio.h>
+#include <string.h>
+
+typedef string;
+
+typedef struct{
+string Tanggal;
+string Bulan;
+string Tahun;
+}Lahir;
+
+typedef struct {
+string Nama;
+int Umur;
+Lahir L;
+string Alamat;
+string Keluhan;
+} Pasien;
+
+Pasien InputDataPasien (Pasien P) {
+printf("***INPUT DATA PASIEN*** \n");
+printf("Nama : "); scanf("%[^\n]", &P.Nama);
+printf("Umur : "); scanf("%s", &P.Umur);
+printf("Tgl Lahir (Contoh: DD MM YYYY) \n");
+printf(": "); scanf("%s%s%s", &P.L.Tanggal, &P.L.Bulan, &P.L.Tahun);
+printf("Alamat : "); scanf("%s", &P.Alamat);
+printf("Keluhan : "); scanf("%s", &P.Keluhan);
+printf("\n\n");
+
+return P;
+}
+
+void TampilkanDataPasien (Pasien P) {
+printf("***DATA PASIEN*** \n");
+printf("Nama : %s\n ", &P.Nama);
+printf("Umur : %s\n ", &P.Umur);
+printf("Tgl Lahir : %s\n", &P.L.Tanggal, P.L.Bulan, P.L.Tahun);
+printf("Alamat : %s\n ", &P.Alamat);
+printf("Keluhan : %s\n ", &P.Keluhan);
+printf("\n\n\n\n\n");
+}
+
+int main() {
+Pasien P;
+P=InputDataPasien(P);
+TampilkanDataPasien(P);
+
+return 0;
+}
